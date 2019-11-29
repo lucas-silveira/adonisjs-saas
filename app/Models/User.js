@@ -42,7 +42,7 @@ class User extends Model {
   }
 
   async can (expression) {
-    const team = await thcan.teamJoins()
+    const team = await this.teamJoins()
       .where('team_id', this.currentTeam)
       .first()
 
